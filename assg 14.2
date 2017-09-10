@@ -1,0 +1,8 @@
+paste("label", 1:30)
+paste0("FN", 1:30)
+set.seed(100)
+Matrix1<-matrix(c(1,2,3,4,5,101,102,103,104,105,201,202,203,204,205,301,302,303,304,305),nrow = 4)
+print(Matrix1)
+GMAT<-matrix(sample(10, size = 60, replace = T),nr=6)
+apply(GMAT, 1, function(x){sum(x>4)})
+which( apply(GMAT,1,function(x){sum(x==7)==2}) )
